@@ -63,7 +63,8 @@ def load_state_dict(module, state_dict, strict=False, logger=None):
         try:
             own_state[name].copy_(param)
         except Exception:
-            raise RuntimeError(
+            #raise RuntimeError(
+            print(
                 'While copying the parameter named {}, '
                 'whose dimensions in the model are {} and '
                 'whose dimensions in the checkpoint are {}.'.format(
